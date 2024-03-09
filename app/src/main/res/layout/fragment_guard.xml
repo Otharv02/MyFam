@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/graybg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/title2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Help"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:elevation="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <ImageView
+        android:id="@+id/ic_setting"
+        android:layout_margin="20dp"
+        android:elevation="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/ic_setting"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/ic_location"
+        android:layout_margin="20dp"
+        android:elevation="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/ic_location"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.google.android.material.card.MaterialCardView
+        app:cardElevation="16dp"
+        android:id="@+id/pink_card"
+        app:cardBackgroundColor="@color/pink"
+        android:layout_margin="20dp"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintStart_toEndOf="@+id/title2"
+        app:layout_constraintTop_toTopOf="@+id/title2"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"/>
+
+
+    <TextView
+        android:id="@+id/pink_card_sos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:elevation="16dp"
+        android:text="@string/sos"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/pink_card"
+        app:layout_constraintTop_toTopOf="@id/pink_card"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        app:layout_constraintEnd_toStartOf="@id/ic_sos"
+        app:layout_constraintStart_toStartOf="@id/pink_card"
+        android:id="@+id/sos_msg"
+        android:textColor="#fff"
+        android:elevation="16dp"
+        android:text="In case of emergency, tell your family!"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toBottomOf="@id/pink_card_sos"
+        tools:ignore="HardcodedText"/>
+
+    <ImageView
+        android:id="@+id/ic_sos"
+        android:layout_margin="20dp"
+        app:layout_constraintBottom_toBottomOf="@id/pink_card"
+        app:layout_constraintTop_toTopOf="@id/pink_card"
+        android:elevation="16dp"
+        app:layout_constraintEnd_toEndOf="@id/pink_card"
+        android:src="@drawable/ic_sos"
+        android:layout_width="100dp"
+        android:layout_height="100dp"/>
+
+    <com.google.android.material.card.MaterialCardView
+        app:cardElevation="16dp"
+        android:id="@+id/green_card"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_margin="16dp"
+        android:layout_marginTop="220dp"
+        app:cardBackgroundColor="@color/blue"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintTop_toBottomOf="@id/pink_card"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/green_card_guard"
+        android:elevation="16dp"
+        app:layout_constraintTop_toTopOf="@id/green_card"
+        app:layout_constraintStart_toStartOf="@id/green_card"
+        android:textColor="#FFF"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:layout_margin="16dp"
+        android:text="@string/guard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        app:layout_constraintEnd_toStartOf="@id/ic_guard"
+        app:layout_constraintStart_toStartOf="@id/green_card"
+        android:id="@+id/guard_msg"
+        android:textColor="#fff"
+        android:text="Open when you are in potentially dangerous situation!"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:elevation="16dp"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toBottomOf="@id/green_card_guard"
+        tools:ignore="HardcodedText" />
+    <ImageView
+        android:id="@+id/ic_guard"
+        android:layout_margin="20dp"
+        app:layout_constraintBottom_toBottomOf="@id/green_card"
+        app:layout_constraintTop_toTopOf="@id/green_card"
+        android:elevation="16dp"
+        app:layout_constraintEnd_toEndOf="@id/green_card"
+        android:src="@drawable/ic_guard"
+        android:layout_width="100dp"
+        android:layout_height="100dp"/>
+
+
+    <com.google.android.material.card.MaterialCardView
+        app:cardElevation="16dp"
+        app:layout_constraintTop_toBottomOf="@id/green_card"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="16dp"
+        android:id="@+id/orange_card"
+        app:cardBackgroundColor="@color/orange"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"/>
+
+    <TextView
+        android:id="@+id/police_station"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/police_near_me"
+        android:layout_margin="16dp"
+        android:elevation="16dp"
+        android:textColor="#fff"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/orange_card"
+        app:layout_constraintTop_toTopOf="@id/orange_card"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        app:layout_constraintEnd_toStartOf="@id/ic_station"
+        app:layout_constraintStart_toStartOf="@id/orange_card"
+        android:id="@+id/orange_card_msg"
+        android:textColor="#fff"
+        android:text="Find Nearby Station"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:elevation="16dp"
+        app:layout_constraintTop_toBottomOf="@id/police_station"
+        tools:ignore="HardcodedText"/>
+
+    <ImageView
+        android:id="@+id/ic_station"
+        android:layout_margin="20dp"
+        app:layout_constraintBottom_toBottomOf="@id/orange_card"
+        app:layout_constraintTop_toTopOf="@id/orange_card"
+        android:elevation="16dp"
+        app:layout_constraintEnd_toEndOf="@id/orange_card"
+        android:src="@drawable/ic_policestation"
+        android:layout_width="100dp"
+        android:layout_height="100dp"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
